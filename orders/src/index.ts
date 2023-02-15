@@ -12,6 +12,7 @@ import { ExpirationCompletedListener } from './events/listeners/expiration-compl
 import { PaymentCompletedListener } from './events/listeners/payment-completed-listener'
 
 const connectDB = async () => {
+  console.log('Starting up ....')
   if (!process.env.JWT_KEY) {// env var for secret key
     throw new Error('JWT_KEY must be defined')
   }
