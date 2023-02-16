@@ -13,6 +13,7 @@ app.use(
   cookieSession({
     signed: false, // disable encryption because we use JWT to take care of it
     secure: process.env.NODE_ENV !== 'test', // cookies will only be used if a user visits our app using https connection - add security level
+  // sercure: false - change for deployment to PROD cluster
   })
 );
 app.use(currentUser) // check if user is authenticated after cookie is set
